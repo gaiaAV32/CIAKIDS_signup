@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700" rel="stylesheet">
+
+<title>SIGNUP</title>
+</head>
+	<body>
+
+
+		<script async="" src="https://www.google-analytics.com/analytics.js">
+		</script>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">
+		</script>
+
+
+
+		<div class="yellowbox">
+			
+			<h1>**The CIA are recruiting**</h1>
+			<p>Are you smart, resourceful, independent and too cool to panic in tough situations? Want to be part of the Children’s Intelligence Agency? If you're under 12 and have top-notch tech skills, plus a head for danger, then we accept applications via email or post...</p>
+
+			<form id="input-form" action="" method="POST" target="no-target">
+			  Type your email
+			  <input id="input-emailCIA" placeholder="watch your back!" name="emailCIA">
+			  <button id="form-submit" type="submit">Sign me in</button>
+			</form>
+
+		</div>
+
+
+		<p id="input-feedback">
+		</p>
+<!-- 
+		<iframe src="#" id="no-target" name="no-target" style="visibility:hidden">
+		</iframe> -->
+
+		<script>
+			console.log('hi');
+		    $('#input-form').one('submit',function(){
+		        var inputq1 = encodeURIComponent($('#input-emailCIA').val());
+		        var q1ID = "entry.1747329619";
+
+		        var baseURL = 'https://docs.google.com/forms/d/1FAIpQLSesx86gT9FuEKvTuABI8BLUhOEfMozFVDXvM1UTUmHk9GZ1yg/formResponse?';
+		        var submitRef = '&submit=Submit';
+		        var submitURL = (baseURL + q1ID + "=" + inputq1 + submitRef);
+		        console.log(submitURL);
+		        $(this)[0].action=submitURL;
+		        $('#input-feedback').text('Thank You!');
+		    });
+		</script>
+
+	</body>
+</html>
